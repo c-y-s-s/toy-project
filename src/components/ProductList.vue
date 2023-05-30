@@ -103,18 +103,9 @@ onMounted(() => {
   loading.value = true;
   // mock call all product api
   setTimeout(() => {
-    AllProductData.value = productData.map((item) => {
-      const currentImgUrl = new URL(
-        "../assets/productPicture/" + item.img,
-        import.meta.url
-      ).href;
+    AllProductData.value = productData;
 
-      loading.value = false;
-      return {
-        ...item,
-        img: currentImgUrl,
-      };
-    });
+    loading.value = false;
   }, 500);
   // mock search text product api
 });

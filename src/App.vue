@@ -16,7 +16,6 @@ const router = useRouter();
 const route = useRoute();
 
 const info = ref(Cookies.get("login"));
-const loginData = computed(() => store.state.loginData);
 const isSearchModalOpen = computed(() => store.state.isSearchModalOpen);
 
 const carouselUrl = reactive({
