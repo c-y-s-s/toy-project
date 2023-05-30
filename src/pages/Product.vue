@@ -1,6 +1,4 @@
 <script setup>
-import { computed } from "@vue/reactivity";
-import { useStore } from "vuex";
 import productData from "../data/productData";
 import { ref, onMounted, watch, reactive } from "vue";
 import { useRoute, useRouter } from "vue-router";
@@ -11,47 +9,13 @@ const newProductData = reactive({});
 const loading = ref(false);
 const selectBuyAmount = ref("1");
 
-watch(
-  () => route.params.product_id,
-  (newId) => {
-    setTimeout(() => {
-      const filter = productData
-        .map((item) => {
-          const currentImgUrl = new URL(
-            "../assets/productPicture/" + item.img,
-            import.meta.url
-          ).href;
-
-          loading.value = false;
-          return {
-            ...item,
-            img: currentImgUrl,
-          };
-        })
-        .filter((item) => item.id === newId);
-    }, 500);
-    newProductData.value = filterData[0];
-  }
-);
-
 onMounted(() => {
   loading.value = true;
   setTimeout(() => {
-    const filterData = productData
-      .map((item) => {
-        const currentImgUrl = new URL(
-          "../assets/productPicture/" + item.img,
-          import.meta.url
-        ).href;
-
-        loading.value = false;
-        return {
-          ...item,
-          img: currentImgUrl,
-        };
-      })
-      .filter((item) => item.id === route.params.product_id);
-
+    const filterData = productData.filter(
+      (item) => item.id === route.params.product_id
+    );
+    loading.value = false;
     newProductData.value = filterData[0];
   }, 500);
 });

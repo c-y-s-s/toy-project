@@ -1,64 +1,74 @@
+  import ProductImg01 from "../assets/productPicture/01.jpg"
+  import ProductImg02 from "../assets/productPicture/02.jpg"
+  import ProductImg03 from "../assets/productPicture/03.jpg"
+  import ProductImg04 from "../assets/productPicture/04.jpg"
+  import ProductImg05 from "../assets/productPicture/05.jpg"
+  import ProductImg06 from "../assets/productPicture/06.jpg"
+  import ProductImg07 from "../assets/productPicture/07.jpg"
+  import ProductImg08 from "../assets/productPicture/08.jpg"
+  import ProductImg09 from "../assets/productPicture/09.jpg"
+  
   const productData = [
     {
       id: "1",
-      img: "01.jpg",
-      name: "Hoopy - Lotso",
+      img: ProductImg01,
+      name: "Lotso",
       price: 399,
       amount: 10,
     },
     {
       id: "2",
-      img: "02.jpg",
-      name: "Hoopy - Ducky",
+      img: ProductImg02,
+      name: "Ducky",
       price: 299,
       amount: 10,
     },
     {
       id: "3",
-      img: "03.jpg",
-      name: "Hoopy - Bunny",
+      img: ProductImg03,
+      name: "Bunny",
       price: 459,
       amount: 10,
     },
     {
       id: "4",
-      img: "04.jpg",
-      name: "Hoopy - Alien",
+      img: ProductImg04,
+      name: "Alien",
       price: 500,
       amount: 10,
     },
     {
       id: "5",
-      img: "05.jpg",
-      name: "Hoopy - Buzz Lightyear",
+      img: ProductImg05,
+      name: "Buzz Lightyear",
       price: 599,
       amount: 10,
     },
     {
       id: "6",
-      img: "06.jpg",
-      name: "Hoopy - Woody",
+      img: ProductImg06,
+      name: "Woody",
       price: 799,
       amount: 3,
     },
     {
       id: "7",
-      img: "07.jpg",
-      name: "Hoopy - Frozone",
+      img: ProductImg07,
+      name: "Frozone",
       price: 699,
       amount: 15,
     },
     {
       id: "8",
-      img: "08.jpg",
-      name: "Hoopy - Helen",
+      img: ProductImg08,
+      name: "Helen",
       price: 399,
       amount: 2,
     },
     {
       id: "9",
-      img: "09.jpg",
-      name: "Hoopy - Mike",
+      img: ProductImg09,
+      name: "Mike",
       price: 499,
       amount: 3,
     },
