@@ -70,6 +70,7 @@ onMounted(async () => {
   <main>
     <router-view></router-view>
   </main>
+  <div class="footer">© 2023 - Leo Chang</div>
 </template>
 
 <style lang="scss" scoped>
@@ -84,5 +85,13 @@ main {
   .carouse-img {
     object-fit: cover;
   }
+}
+
+.footer {
+  background: #b8b0b0;
+  color: #fff;
+  padding: 30px;
+  margin-top: 16px;
+  text-align: center;
 }
 </style>
