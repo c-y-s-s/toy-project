@@ -22,20 +22,7 @@ store.subscribe((mutation, state) => {
           return item.name.indexOf(searchValue.value) !== -1;
         });
 
-        const resultData = searchData.map((item) => {
-          const currentImgUrl = new URL(
-            "../assets/productPicture/" + item.img,
-            import.meta.url
-          ).href;
-
-          loading.value = false;
-          return {
-            ...item,
-            img: currentImgUrl,
-          };
-        });
-
-        AllProductData.value = resultData;
+        AllProductData.value = searchData;
 
         loading.value = false;
       }, 500);

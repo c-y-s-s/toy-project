@@ -9,17 +9,6 @@ const newProductData = reactive({});
 const loading = ref(false);
 const selectBuyAmount = ref("1");
 
-onMounted(() => {
-  loading.value = true;
-  setTimeout(() => {
-    const filterData = productData.filter(
-      (item) => item.id === route.params.product_id
-    );
-    loading.value = false;
-    newProductData.value = filterData[0];
-  }, 500);
-});
-
 // 加入購物車邏輯
 const handleAddShoppingCart = (type) => {
   const buyProductData = [
@@ -69,6 +58,17 @@ const handleAddShoppingCart = (type) => {
     ? alert("加入購物車成功")
     : router.push({ name: "ProductCheckout" });
 };
+
+onMounted(() => {
+  loading.value = true;
+  setTimeout(() => {
+    const filterData = productData.filter(
+      (item) => item.id === route.params.product_id
+    );
+    loading.value = false;
+    newProductData.value = filterData[0];
+  }, 500);
+});
 </script>
 
 <template>
